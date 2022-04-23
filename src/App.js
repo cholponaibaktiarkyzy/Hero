@@ -1,16 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-import header from './components/header'
-import Hero from './Hero/Hero'
-import Header from './components/header';
+import ExpensesItem from "./components/expensesitem";
 
 function App() {
+  const expenseTitle = "Car Insurance";
+  const expenseAmount = 293.2;
   return (
       <div>
-        <Header/>
-        <Hero/>
+        <ExpensesItem
+            title={expenseTitle}
+            price={expenseAmount}
+        />
+        <ExpensesItem
+            title="Book" price="44"/>
+        <ExpensesItem
+            title="Internet" price="34"
+        />
       </div>
   );
 }
 
-export default App
+export default App;
